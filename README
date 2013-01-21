@@ -1,0 +1,8 @@
+CyanogenMod device configuration for the Huawei U8650
+
+Originally designed by marcnvidic (u8150) and Ivan (c8650)
+Changed, improved and optimized by tilal6991 and alanorth (u8150) and Lucky76 (u8650)
+
+Pre-Setup
+=========
+Execute "extract-files.sh" to extract prebuilt libraries (from a working device)

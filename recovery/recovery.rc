@@ -1,0 +1,51 @@
+on early-init
+    start ueventd
+
+on init
+    export PATH /sbin
+    export ANDROID_ROOT /system
+    export ANDROID_DATA /data
+    export ANDROID_CUST /cust
+    export EXTERNAL_STORAGE /sdcard
+
+    symlink /system/etc /etc
+
+    mkdir /cache
+    mkdir /boot
+    mkdir /sdcard
+    mkdir /sd-ext
+    mkdir /datadata
+    mkdir /emmc
+    mkdir /system
+
+    mkdir /data
+    mkdir /cust
+    mount /tmp /tmp tmpfs
+
+# Add permissions for camera access
+  chmod 0666 /dev/msm_camera/config0
+  chmod 0666 /dev/msm_camera/control0
+  chmod 0666 /dev/msm_camera/frame0
+  chmod 0666 /dev/msm_camera/pic0
+
+on boot
+
+    ifup lo
+    hostname localhost
+    domainname localdomain
+
+    class_start default
+
+service ueventd /sbin/ueventd
+    critical
+
+service recovery /sbin/recovery
+
+service adbd /sbin/adbd recovery
+    disabled
+
+on property:persist.service.adb.enable=1
+    start adbd
+
+on property:persist.service.adb.enable=0
+    stop adbd

@@ -1,0 +1,188 @@
+#
+# system.prop for u8650
+#
+# RIL
+rild.libpath=/system/lib/libril-qc-1.so
+rild.libargs=-d /dev/smd0
+ro.telephony.ril.v3=icccardstatus,datacall,signalstrength,facilitylock
+ril.subscription.types=RUIM,NV
+keyguard.no_require_sim=true
+ro.gsm.factory=huawei
+net.ntp.server=time.windows.com
+net.ntp.server2=time.nist.gov
+net.ntp.time=0
+net.ntp.timereference=0
+ro.config.hwdrm=true
+ro.config.hw_timeformat=true
+ro.config.timeformat=24
+mobiledata.interfaces=rmnet0,rmnet1,rmnet2
+ro.telephony.ril.v3=icccardstatus,datacall,signalstrength,facilitylock
+net.qtaguid_enabled=0
+ro.config_datause_iface=rmnet0
+ro.secure=0
+ro.telephony.ril.v3=qcomuiccstack
+ro.telephony.default_network=0
+ro.telephony.call_ring.multiple=false
+ro.ril.hsxpa=1
+ro.ril.gprsclass=10
+ro.ril.def.agps.mode=2
+ro.config.fm_type=libbcmfm_if
+persist.rild.nitz_plmn=
+persist.rild.nitz_long_ons_0=
+persist.rild.nitz_long_ons_1=
+persist.rild.nitz_long_ons_2=
+persist.rild.nitz_long_ons_3=
+persist.rild.nitz_short_ons_0=
+persist.rild.nitz_short_ons_1=
+persist.rild.nitz_short_ons_2=
+persist.rild.nitz_short_ons_3=
+ro.config.KeyPassToUser=true
+ro.config.hwft_PinPukUnlockscr=true
+
+# WiFi
+wifi.interface=eth0
+wifi.supplicant_scan_interval=180
+
+# Graphics and performance
+ro.media.dec.jpeg.memcap=20000000
+windowsmgr.max_events_per_sec=500
+view.fading_edge_length=8
+view.touch_slop=15
+view.minimum_fling_velocity=25
+view.scroll_friction=0.008
+persist.sys.use_dithering=1
+persist.sys.purgeable_assets=1
+persist.sys.use_16bpp_alpha=1
+setprop ro.media.enc.jpeg.quality=90
+setprop ro.media.dec.jpeg.memcap=20000000
+ro.media.enc.hprof.vid.bps=8000000
+windowsmgr.max_events_per_sec=300
+ro.media.enc.jpeg.quality=100 
+ro.opengles.version=131072
+
+#Audio
+persist.sys.fm-attn=0
+persist.sys.headset-attn=0
+persist.sys.speaker-attn=10
+
+# LCD
+ro.sf.hwrotation=1
+ro.sf.lcd_density=160
+ro.opengles.version=131072
+
+#Camera
+ro.product.camera=msm7x27
+debug.camcorder.disablemeta=1
+
+
+ro.compcache.default=26
+sys.checkfs.fat=false
+ro.ril.disable.power.collapse=0
+pm.sleep_mode=2
+debug.performance.tuning=1
+movfilter=40
+move hyst=0
+ro.max.fling_velocity=4000
+debug.qctwa.statusbar=1
+debug.qctwa.preservebuf=1
+com.qc.hardware=true
+net.tcp.buffersize.default=4096,87380,256960,4096, 16384,256960
+net.tcp.buffersize.wifi=4096,87380,256960,4096,163 84,256960
+ro.HOME_APP_ADJ=1
+
+DEVICE_PROVISIONED=1
+com.qc.hardware=true
+
+# USB
+persist.sys.usb.config=mass_storage,adb
+sys.usb.config=mass_storage
+persist.service.adb.enable=1
+
+# System
+dalvik.vm.execution-mode=int:jit
+dalvik.vm.dexopt-data-only=1
+dalvik.vm.heapsize=48m
+ro.compcache.default=26
+sys.checkfs.fat=false
+ro.vold.umsdirtyratio=20
+dalvik.vm.dexopt-data-only=1
+ro.config.disable_hw_accel=true
+dalvik.vm.lockprof.threshold=500
+dalvik.vm.dexopt-flags=m=y
+dalvik.vm.dexopt-data-only=1
+
+#Additional Tweaks by Lucky76
+ro.config.hw_camera_resize=true
+ro.config.dualmic=true
+setprop windowsmgr.support_rotation_270=true
+setprop ro.ext4fs=1
+
+ro.config.hw_proximitySensor=true
+ro.config.hw_proximity=true
+ro.config.xtra_support=true
+
+ro.config.hw_quickpoweron=true
+persist.sys.quickpoweron=normal
+persist.sys.animationstart=false
+ro.config.hw_poanimation=5000
+
+ro.config.hw_front_camera=false
+ro.config.do_sdcard_upgrade=true
+ro.config.hw_voicerecord=true
+
+ro.config.ipcall=true
+ro.config.hw_reject_message = true
+ro.runmode=normal
+ro.config.hw_fast_dormancy=1
+ro.config.hw_GSensorOptimize=true
+ro.hw_oom_app=com.android.mms
+ro.config.hw_popupsaveoropen=false
+persist.sys.actualpoweron=true
+
+#Beats Audio Tweaks
+Maximum Audio Re-Sampling By ZeroInfinity\n\n
+af.resampler.quality=3\n
+
+#xLoud Engine Service\n
+ro.semc.sound_effects_enabled=true\n
+ro.semc.xloud.supported=true\n
+persist.service.xloud.enable=1\n
+
+#Rendering User Interface With GPU 
+# 0 CPU
+# 1 GPU
+debug.sf.hw=1
+
+# cpu (default) 
+# gpu (quando il debug.sf.hw = 1)
+debug.composition.type=gpu 
+
+# se settato a 0 migliora il 2D rimuovendo il blocco fps
+# da utilizzare solo se debug.sf.hw=1
+debug.gr.swapinterval=0
+
+# usa l'accelarazione hardware per i video
+video.accelerate.hw=1
+
+#Bravia Engine Service
+ro.service.swiqi.supported=true
+persist.service.swiqi.enable=1
+persist.sys.composition.type=gpu
+persist.sys.ui.hw=true
+
+# pm.sleep_mode       - The mode used when the phone is off 
+#                       0=Power Collapse Suspend, 1=Power Collapse, 2=Apps Sleep, 
+#                       3=Slow Clock and Wait for Interrupt 4=Wait for Interrupt 
+#                       Use 2 for best power savings 
+# 
+pm.sleep_mode=2
+
+
+# Misc.
+ro.com.android.dateformat=dd-MM-yyyy
+ro.com.google.locationfeatures=0
+
+ro.confg.hw_appsbootversion=u8650V100R001C92B835SP01_APPSBOOT
+ro.confg.hw_appversion=u8650V100R001C92B835SP01_KERNEL
+ro.confg.hw_appfsversion=u8650V100R001C92B835SP01_SYSIMG
+
