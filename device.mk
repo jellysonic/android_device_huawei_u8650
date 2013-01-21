@@ -21,7 +21,7 @@ PRODUCT_MODEL := Huawei u8650
 
 # Graphics 
 PRODUCT_PACKAGES += \
-#   gralloc.msm7x27 \
+    gralloc.msm7x27 
 #   copybit.msm7x27 \
     hwcomposer.msm7x27
 
@@ -45,7 +45,7 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-        camera.msm7x27
+        camera.u8650
 
 # Other
 PRODUCT_PACKAGES += \
