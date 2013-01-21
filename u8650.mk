@@ -29,5 +29,5 @@ $(call inherit-product, $(LOCAL_PATH)/device.mk)
 # The gps config appropriate for this device
 $(call inherit-product, device/common/gps/gps_as_supl.mk)
 
-$(call inherit-product-if-exists, vendor/huawei/u8650/u8650-vendor.mk)
-$(call inherit-product-if-exists, vendor/huawei/u8650/u8650-vendor-blobs.mk)
+$(call inherit-product, vendor/huawei/u8650/u8650-vendor.mk)
+$(call inherit-product, vendor/huawei/u8650/u8650-vendor-blobs.mk)
