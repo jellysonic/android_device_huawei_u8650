@@ -50,7 +50,8 @@ PRODUCT_PACKAGES += \
     audio.usb.default \
     lights.u8650 \
     gps.u8650 \
-    camera.u8650 \
+    camera.msm7x27 \
+	camera.u8650 \
     Apollo
 
 PRODUCT_COPY_FILES += \
