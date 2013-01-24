@@ -15,4 +15,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/u8650.mk
+    $(LOCAL_DIR)/device_u8650.mk

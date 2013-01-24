@@ -19,18 +19,19 @@ PRODUCT_NAME := huawei_u8650
 PRODUCT_DEVICE := u8650
 PRODUCT_MODEL := Huawei u8650
 
+PRODUCT_AAPT_CONFIG := mdpi
+PRODUCT_AAPT_PREF_CONFIG := mdpi
+
 # Graphics 
 PRODUCT_PACKAGES += \
-    gralloc.msm7x27 
-#   copybit.msm7x27 \
-    hwcomposer.msm7x27
+    gralloc.u8650
+#    copybit.u8650
 
 # Audio
 PRODUCT_PACKAGES += \
     audio.primary.u8650 \
     audio_policy.u8650 \
-    audio.a2dp.default \
-    libaudioutils
+    audio.a2dp.default
 
 # Zram
 PRODUCT_PACKAGES += \
@@ -40,22 +41,20 @@ PRODUCT_PACKAGES += \
 # Video decoding
 PRODUCT_PACKAGES += \
     libstagefrighthw \
+    libopencorehw \
     libmm-omxcore \
     libOmxCore
 
-# Camera
-PRODUCT_PACKAGES += \
-        camera.u8650
-
 # Other
 PRODUCT_PACKAGES += \
+    audio.usb.default \
     lights.u8650 \
-    librpc \
-    gps.u8650
+    gps.u8650 \
+    camera.u8650 \
+    Apollo
 
-# Other
-PRODUCT_PACKAGES += \
-    dexpreopt
+PRODUCT_COPY_FILES += \
+        device/common/gps/gps.conf_EU_SUPL:system/etc/gps.conf
 
 # Live Wallpapers
 PRODUCT_PACKAGES += \
@@ -97,7 +96,7 @@ PRODUCT_COPY_FILES += \
     device/huawei/u8650/prebuilt/init.huawei.rc:root/init.huawei.rc \
     device/huawei/u8650/prebuilt/ueventd.huawei.rc:root/ueventd.huawei.rc \
     device/huawei/u8650/prebuilt/init.rc:root/init.rc \
-  device/huawei/u8650/prebuilt/init.huawei.usb.rc:root/init.huawei.usb.rc
+   device/huawei/u8650/prebuilt/init.huawei.usb.rc:root/init.huawei.usb.rc
 # Init files
 #PRODUCT_COPY_FILES += \
  #       device/huawei/u8650/prebuilt/root/init:root/init \
